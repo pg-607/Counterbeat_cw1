@@ -1,0 +1,191 @@
+/* ==========================================================================
+   style.css - the whole site. One stylesheet is enough at this stage.
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;             /* padding and borders count inside a width */
+}
+
+a {
+    color: #ff8a2a;                     /* .logo and .nav-link set their own colour and win on specificity */
+}
+
+body {
+    margin: 0;
+    background: #0e1117;
+    color: #e6e9ef;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------------------------ header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+    background: #171c26;
+    border-bottom: 1px solid #2a3140;
+}
+
+.logo {
+    color: #e6e9ef;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff8a2a;                     /* colours only the "Beat" half */
+}
+
+.nav-link {
+    margin-left: 16px;
+    color: #aeb6c4;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #e6e9ef;
+}
+
+.nav-link.active {
+    color: #ff8a2a;                     /* marks the page you are on */
+}
+
+/* -------------------------------------------------------------------- main */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+}
+
+.narrow {
+    max-width: 480px;                   /* forms do not need the full width */
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+h2 {
+    margin-top: 32px;
+    font-size: 20px;
+}
+
+.note {
+    color: #aeb6c4;
+    font-size: 14px;
+}
+
+/* ----------------------------------------------------------------- buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #ff8a2a;
+    color: #17110a;                     /* dark text, because orange is bright */
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #ffa24a;
+}
+
+/* ------------------------------------------------------------------- forms */
+.card {
+    padding: 24px;
+    border: 1px solid #2a3140;
+    border-radius: 8px;
+    background: #171c26;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input,
+select {                                /* the drop-down must match the text boxes */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2a3140;
+    border-radius: 6px;
+    background: #0e1117;
+    color: #e6e9ef;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #ff8a2a;         /* keyboard users need to see where they are */
+}
+
+.hint {                                 /* permanent helper text under a field */
+    display: block;
+    color: #aeb6c4;
+    font-size: 12px;
+}
+
+.error {
+    display: block;
+    min-height: 18px;                   /* reserve the line so the form does not jump */
+    color: #ff5f6d;
+    font-size: 13px;
+}
+
+.message {
+    margin: 0 0 8px;
+    font-size: 14px;
+}
+
+.message.ok {
+    color: #7effba;
+}
+
+.message.bad {
+    color: #ff5f6d;
+}
+
+form .button {
+    margin-top: 16px;
+    width: 100%;
+}
+
+/* -------------------------------------------------------------------- game */
+.scoreboard {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 8px;
+    color: #aeb6c4;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+}
+
+.scoreboard strong {
+    color: #e6e9ef;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    border: 1px solid #2a3140;
+    border-radius: 8px;
+    background: #05070b;
+}
+
+/* ------------------------------------------------------------------ footer */
+footer {
+    padding: 16px 24px;
+    border-top: 1px solid #2a3140;
+    color: #aeb6c4;
+    font-size: 13px;
+    text-align: center;
+}

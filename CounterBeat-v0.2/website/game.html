@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Play &mdash; CounterBeat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation bar, the same on every page -->
+    <header class="header">
+        <a class="logo" href="index.html">Counter<span>Beat</span></a>
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="game.html">Play</a>
+            <a class="nav-link" href="login.html">Log in</a>
+            <a class="nav-link" href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <!-- The game: everything is drawn on this one canvas by js/game.js -->
+    <main>
+        <h1>Prototype</h1>
+        <p id="player" class="note">Not logged in &mdash; scores are not saved yet.</p>
+
+        <div class="scoreboard">
+            <span>SCORE <strong id="score">0</strong></span>
+            <span>COMBO <strong id="combo">0</strong></span>
+            <span>LAST <strong id="judgement">&mdash;</strong></span>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="300"></canvas>
+
+        <p>
+            <button class="button" id="startButton" type="button">Start</button>
+        </p>
+
+        <h2>How to play</h2>
+        <ul>
+            <li>Hold <strong>A</strong> or <strong>D</strong> to run towards the lit window.</li>
+            <li>Tap the <strong>opposite</strong> key to stop dead &mdash; letting go just makes you slide.</li>
+            <li>Press <strong>Space</strong> on the beat while you are stopped in front of the window.</li>
+        </ul>
+        <p class="note">A shot only counts if all three are true: you are in the lit window, your speed is
+            near zero, and you fire within 150 ms of the beat.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>CounterBeat v0.2 &mdash; CST2120 Coursework 1</p>
+    </footer>
+
+    <script src="js/game.js"></script>
+</body>
+
+</html>

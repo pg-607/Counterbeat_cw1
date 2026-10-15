@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in &mdash; CounterBeat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation bar, the same on every page -->
+    <header class="header">
+        <a class="logo" href="index.html">Counter<span>Beat</span></a>
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="game.html">Play</a>
+            <a class="nav-link active" href="login.html">Log in</a>
+            <a class="nav-link" href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <!-- Login form. novalidate turns off the browser's own checking so that
+         all the validation is done by my JavaScript in js/login.js -->
+    <main class="narrow">
+        <h1>Log in</h1>
+
+        <div class="card">
+            <p class="message" id="message"></p>
+
+            <form id="loginForm" novalidate>
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+                <span class="error" id="emailError"></span>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Your password">
+                <span class="error" id="passwordError"></span>
+
+                <button class="button" type="submit">Log in</button>
+            </form>
+        </div>
+
+        <p class="note">No account yet? <a href="register.html">Register here</a>.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>CounterBeat v0.2 &mdash; CST2120 Coursework 1</p>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
